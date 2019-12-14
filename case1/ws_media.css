@@ -6,18 +6,26 @@
    Case Problem 1
 
    Rhetoric in the United States Styles for Media
-   Author: 
-   Date:   
+   Author:  Yelaina Buford 
+   Date:   12/13/19
 
    Filename: ws_media.css
 
 */
 
 /* VideoPlayer Styles */
-
+video{
+   display: block;
+   width: 90%;
+   margin: 5px auto;
+}
 
 
 
 /* Track Styles */
-
+::cue{
+   font: 1.3em sans-serif;
+   color: rgb(221, 128, 160);
+   background: rgba(255, 255, 255, 0.8);
+}
 
