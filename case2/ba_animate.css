@@ -1,0 +1,35 @@
+/*
+   New Perspectives on HTML and CSS, 7th Edition
+   Tutorial 8
+   Case Problem 2
+
+   Big Apple Physics Animation Styles
+   Author:  Yelaina Buford 
+   Date:   12/13/19
+
+   Filename: ba_animate.css
+
+*/
+
+
+/* Transition Styles */
+nav a{
+   background: url(ba_target.png) horizontal 
+   vertical no-repeat;
+   background-size: 0%;
+   font: rgb(253, 240, 133);
+   transition: background-size 0.3s,  
+   color 0.8s;
+}
+nav a:hover{
+   background-size: 100%;
+   color: rgb(244, 130, 130); 
+}
+/* Animation Styles */
+@keyframe moveRed{
+   0%{}
+   49%{transform:scalex; filter: drop-shadow;}
+   50%{}
+   51%{}
+   100%{}
+}
