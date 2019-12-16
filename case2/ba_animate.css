@@ -25,10 +25,76 @@ nav a:hover{
    color: rgb(244, 130, 130); 
 }
 /* Animation Styles */
-@keyframe moveRed{
-   0%{position: left;}
-   49%{transform:scalex; filter: drop-shadow;}
-   50%{}
-   51%{}
-   100%{}
+img#redBall{
+   animation: moveRed 5s linear infinite;
+}
+@keyframes moveRed{
+   0%{
+      left: 0px; 
+      filter: drop-shadow(-40 20 25 rgb(51, 51, 51));
+   }   
+   49%{
+      transform: scaleX(1);
+   }
+   50%{
+      left: 380px;
+      filter: drop-shadow(0 0 0 rgb(51, 51, 51));
+      transform: scaleX(0.4);
+   }
+   51%{
+      transform: scaleX(1.0);
+   }
+   100%{
+      left: 0px;
+      filter: drop-shadow(-40 20 25 rgb(51, 51, 51));
+   }
+}
+
+img#blueBall{
+   animation: moveBlue 5s linear infinite;
+}
+@keyframes moveBlue{
+   0%{
+      right: 0px; 
+      filter: drop-shadow(40 20 25 rgb(51, 51, 51));
+   }   
+   49%{
+      transform: scaleX(1);
+   }
+   50%{
+      right: 380px;
+      filter: drop-shadow(0 0 0 rgb(51, 51, 51));
+      transform: scaleX(0.4);
+   }
+   51%{
+      transform: scaleX(1.0);
+   }
+   100%{
+      right: -700px;
+      filter: drop-shadow(120 20 25 rgb(51, 51, 51));
+   }
+}
+
+div#redSpeed2, div#blueSpeed2{
+   animation: showText 5s linear infinite;
+}
+@keyframes showText{
+   0%, 41%{
+      opacity: 0;
+   }
+   51%, 100%{
+      opacity: 1;
+   }
+}
+
+div#redSpeed1, div#blueSpeed1{
+   animation: hideText 5s linear infinite;
+} 
+@keyframes hideText{
+   0%, 49%{
+      opacity: 1;
+   }
+   51%, 100%{
+      opacity: 0;
+   }
 }
