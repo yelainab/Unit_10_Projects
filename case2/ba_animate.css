@@ -14,9 +14,8 @@
 
 /* Transition Styles */
 nav a{
-   background: url(ba_target.png) horizontal 
-   vertical no-repeat;
-   background-size: 0%;
+   background: url(ba_target.png) center/0%
+   no-repeat;
    font: rgb(253, 240, 133);
    transition: background-size 0.3s,  
    color 0.8s;
@@ -27,7 +26,7 @@ nav a:hover{
 }
 /* Animation Styles */
 @keyframe moveRed{
-   0%{}
+   0%{position: left;}
    49%{transform:scalex; filter: drop-shadow;}
    50%{}
    51%{}
