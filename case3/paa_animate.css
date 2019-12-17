@@ -35,7 +35,7 @@ nav#gameLinks a::after{
    left: 0px;
    width: 0%;
    height: 8px;
-   background: linear-gradient(rgb(237, 243, 71), rgb(188, 74, 0));
+   background: linear-gradient(to right, rgb(237, 243, 71), rgb(188, 74, 0));
    border-radius: 4px;
    opacity: 0;
 }
@@ -46,7 +46,7 @@ nav#gameLinks a:hover::after{
    left: 0px;
    width: 100%;
    height: 8px;
-   background: linear-gradient(rgb(237, 243, 71) , rgb(188, 74, 0));
+   background: linear-gradient(to right, rgb(237, 243, 71) , rgb(188, 74, 0));
    border-radius: 4px;
    opacity: 1;
    transition: opacity 0.5s, width .5s;
@@ -57,32 +57,57 @@ nav#gameLinks a:hover::after{
 div.sprite{
    position: absolute;
 }
+div#butterfly{
+   width: 35px;
+   height: 35px;
+   top: 60px;
+   left: -50px;
+   background: url(paa_bfly.png) left center/ cover no-repeat;
+}
 div#bat{
-   position: absolute;
-   
-   top: 40px;
+   width: 40px;
    height: 50px;
    top: 100px;
    left: -50px;
    background: url(paa_bat.png) left center/ cover no-repeat;
-}
-div#butterfly{
-  position: absolute;
-   background: url(paa_butterfly.png); 
 }
 div#fox{
    width: 280px;
    height: 260px;
    bottom: 10px;
    right: 10px;
+   background: url(paa_fox.png) left center/ cover no-repeat;
 }
+
 /* Animation Styles */
 @keyframes playSprite{
    100%{
-      background-position: right;
+      background-position: right center;
    }
 }
-div#butterfly{
-   animation: playSprite 3s;
+@keyframes flyRight{
+   25%{
+      top: 150px;
+   }
+   50%{
+      top: 55px;
+   }
+   65%{
+      top: 120px;
+   }
+   90%{
+      top: 50px;
+   }
+   100%{
+      top: 80px;
+      left: 80px;
+   }
+}
 
+div#fox{
+   animation: playSprite 3.5s steps(27 steps) 4s infinite;
+}
+div#butterfly{
+   animation: playSprite 1s steps(39) 3s infinite;
+ 
 }
