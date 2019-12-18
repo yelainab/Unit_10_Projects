@@ -86,28 +86,24 @@ div#fox{
    }
 }
 @keyframes flyRight{
-   25%{
-      top: 150px;
-   }
-   50%{
-      top: 55px;
-   }
-   65%{
-      top: 120px;
-   }
-   90%{
-      top: 50px;
-   }
+   25%{top: 150px;}
+   50%{top: 55px;}
+   65%{top: 120px;}
+   90%{top: 50px;}
    100%{
       top: 80px;
-      left: 80px;
+      left: 100%;
    }
 }
 
 div#fox{
-   animation: playSprite 3.5s steps(27 steps) 4s infinite;
+   animation: playSprite 3.5s infinite steps(27);
+   animation-delay: 4s;
+}
+div#bat{
+   animation: playSprite 2s infinite steps(39), flyRight 8s linear infinite;
 }
 div#butterfly{
-   animation: playSprite 1s steps(39) 3s infinite;
- 
+   animation: playSprite 1s infinite 3s steps(33), flyRight 6s cubic-bezier(0, 1, 0.73, 0) infinite;
+   ;
 }

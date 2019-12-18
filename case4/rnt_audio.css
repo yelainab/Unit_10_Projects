@@ -14,4 +14,15 @@
 */
 
 /* Audio Styles */
-
+audio{
+   display: block;
+   filter: drop-shadow(darkgray 8px 8px 15px); 
+   margin: 20px auto;
+   width: 80%;
+}
+audio::-webkit-media-controls-panel{
+   background: rgb(128, 128, 255);
+}
+iframe{
+   box-shadow: black 2px 2px 5px;
+}
